@@ -1,47 +1,28 @@
 //----------------------------//
 
-// 25. Destructuring
-// ES6 / ES2015 introduces the new syntax for destructuring arrays and objects.
-// Destructuring is a new way to extract data from arrays and objects.
+// 27. Arrow Functions
+// These are the new feature in ES6.
+// They are a shorter syntax for writing function expressions.
+// They are also a new way to write functions.
 
-// destructuring between Arrays
-const arr1 = [1, 2, 3];
-const arr2 = [4, 5, 6];
-const arr3 = [...arr1, ...arr2];
-console.log(arr3)
 
-const arr4 = [{
-    name: 'kabir'
-}];
-const arr5 = [{
-    name: 'sahil'
-}];
-const arr6 = [...arr4, ...arr5];
-console.log(arr6)
+// javaScript hoists all the function declaration to the top of the file.
+// do not do in the cases of arrows functions
+normalFunction()
+function normalFunction() {
+    return 1
+}
+normalFunction()
 
-// destructuring between objects
+// can not access arrow function before it is declared
+// arrowFunction()
+const arrowFunction = () => 2
+console.log(arrowFunction())
 
-const KEYNAME1 = 'Developer + hacker';
-const KEYNAME2 = 'Developer + hacker';
-const obj1 = {
-    name1: 'kabir',
-    age1: 21,
-    KEYNAME1
-};
+const btn = document.getElementById('increment')
 
-const obj2 = {
-    name2: 'sahil',
-    age2: 20,
-    KEYNAME2,
-};
-
-const obj3 = {
-    ...obj1,
-    // obj2 will overwrite obj1 name property value,
-    // if both properties having same name like name, name
-    ...obj2
-};
-
-console.log(obj3);
+btn.addEventListener('click', () => {
+    console.log('clicked')
+})
 
 //----------------------------//
